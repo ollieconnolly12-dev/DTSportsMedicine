@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DT Sports Medicine — Clinic Launch Content Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* DT Sports Medicine brand palette */
+    --navy: #0A2240;           /* Pantone 289 C */
+    --orange: #F88D2A;         /* Pantone 715 C */
+    --light: #DCE3EB;          /* Pantone 656 C */
+    --blue: #416BA9;           /* Pantone 7683 C */
+    /* Working tokens */
+    --bg: #f3f6fb;
+    --ink: var(--navy);
+    --ink-soft: #1d3556;
+    --muted: #5e6e87;
+    --line: #d8dfeb;
+    --card: #ffffff;
+    --accent: var(--orange);
+    --accent-soft: #fde9d3;
+    --ig: #e1306c;
+    --tt: #000000;
+    --ok: #1f8a4c;
+    --warn: #b76b00;
+    --edit: var(--blue);
+    --edit-soft: #e7edf7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, .stat, .day, .badge, .cat, .when, .lbl, .section-title, .col h3, .eyebrow, .tag, .pbadge, .meta-tag, .cd-cell .l, .countdown h3, .type {
+    font-family: "Oswald", "Barlow", -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .stat, .day, h1 { letter-spacing: 0.01em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* HERO */
+  .hero { background: var(--navy); color: #fff; border-radius: 18px; padding: 28px 32px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: center; position: relative; overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(115deg, transparent 47%, rgba(65,107,169,0.18) 47%, rgba(65,107,169,0.18) 53%, transparent 53%),
+      linear-gradient(65deg, transparent 47%, rgba(65,107,169,0.14) 47%, rgba(65,107,169,0.14) 53%, transparent 53%);
+    background-size: 320px 200px;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .hero-logo { width: 56px; height: 36px; flex-shrink: 0; }
+  .hero-wordmark { display: flex; flex-direction: column; line-height: 1; }
+  .hero-wordmark .wm-1 { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 22px; color: #fff; letter-spacing: 0.04em; }
+  .hero-wordmark .wm-2 { font-family: "Barlow", sans-serif; font-weight: 700; font-size: 11px; color: var(--orange); letter-spacing: 0.32em; margin-top: 3px; }
+  .hero-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.18); }
+  .hero .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--light); margin-bottom: 10px; font-weight: 600; }
+  .hero h1 { font-size: 36px; line-height: 1.05; margin: 0 0 12px; font-weight: 700; letter-spacing: 0.005em; text-transform: uppercase; color: #fff; }
+  .hero p { color: #cfd6e2; margin: 0; font-size: 14.5px; max-width: 56ch; line-height: 1.55; font-family: "Barlow", sans-serif; letter-spacing: 0; }
+  .hero .tag { display: inline-block; background: var(--orange); color: var(--navy); padding: 4px 10px; border-radius: 4px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; font-family: "Barlow", sans-serif; }
+  .countdown { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 18px; backdrop-filter: blur(4px); }
+  .countdown h3 { margin: 0 0 12px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--light); font-weight: 600; }
+  .cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .cd-cell { background: rgba(10, 34, 64, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px 6px; text-align: center; }
+  .cd-cell .n { font-family: "Oswald", sans-serif; font-size: 26px; font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; line-height: 1; }
+  .cd-cell .l { font-size: 10px; color: var(--light); opacity: 0.7; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 4px; font-weight: 600; }
+  .cd-launch { margin-top: 10px; font-size: 11px; color: var(--orange); text-align: center; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; font-family: "Barlow", sans-serif; }
+
+  /* TABS */
+  .tabs { display: flex; gap: 6px; margin: 22px 0 18px; flex-wrap: wrap; }
+  .tab { background: transparent; border: 1px solid var(--line); color: var(--ink-soft); padding: 9px 14px; border-radius: 999px; cursor: pointer; font-size: 13px; font-weight: 600; transition: all 0.12s ease; }
+  .tab:hover { border-color: var(--ink); }
+  .tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade 0.18s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* CARDS */
+  .grid { display: grid; gap: 14px; }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
+  .card .muted { color: var(--muted); font-size: 13px; }
+  .stat { font-size: 28px; font-weight: 800; letter-spacing: -0.01em; margin-top: 4px; }
+
+  /* OVERVIEW */
+  .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+  .pillar { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; position: relative; }
+  .pillar .badge { display: inline-block; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-bottom: 8px; }
+  .pillar h4 { margin: 0 0 4px; font-size: 14px; font-weight: 700; }
+  .pillar p { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+
+  /* TIMELINE */
+  .timeline { position: relative; margin-top: 18px; padding-left: 22px; border-left: 2px solid var(--line); }
+  .t-item { position: relative; padding: 0 0 22px 18px; }
+  .t-item::before { content: ""; position: absolute; left: -29px; top: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); }
+  .t-item.launch::before { background: var(--accent); border-color: var(--accent); }
+  .t-item h4 { margin: 0 0 4px; font-size: 14px; font-weight: 700; }
+  .t-item .when { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+  .t-item p { margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+
+  /* CALENDAR / FILTERS */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0 14px; }
+  .filters .lbl { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-right: 4px; }
+  .chip { background: #fff; border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  .chip:hover { border-color: var(--ink); }
+  .chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .chip.ig .dot { background: var(--ig); }
+  .chip.tt .dot { background: var(--tt); }
+
+  .post-list { display: grid; gap: 10px; }
+  .post { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; grid-template-columns: 120px 1fr auto; gap: 16px; align-items: start; position: relative; }
+  .post .date { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .post .day { font-size: 18px; font-weight: 800; color: var(--ink); margin-top: 2px; }
+  .post .platforms { display: flex; gap: 4px; margin-top: 6px; }
+  .pbadge { font-size: 10px; padding: 2px 7px; border-radius: 999px; font-weight: 700; letter-spacing: 0.04em; cursor: default; user-select: none; }
+  .pbadge.ig { background: #ffe6ef; color: var(--ig); }
+  .pbadge.tt { background: #ececec; color: var(--tt); }
+  .pbadge.off { background: #f1ede4; color: #aaa; }
+  .post h4 { margin: 0 0 4px; font-size: 14.5px; font-weight: 700; }
+  .post .copy { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+  .post .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+  .meta-tag { font-size: 10px; padding: 2px 8px; border-radius: 999px; background: var(--light); color: var(--ink-soft); letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; position: relative; }
+  .post .type { text-align: right; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+
+  /* CHECKLIST */
+  .check-section { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; position: relative; }
+  .check-section h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+  .check-section .sub { font-size: 12.5px; color: var(--muted); margin-bottom: 12px; }
+  .check { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--line); position: relative; }
+  .check:first-of-type { border-top: 0; }
+  .check input[type=checkbox] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0; }
+  .check label { font-size: 13.5px; line-height: 1.45; cursor: pointer; flex: 1; }
+  .check label .hint { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .check.done label { text-decoration: line-through; color: var(--muted); }
+
+  /* PROGRESS */
+  .progress { height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; margin: 8px 0 0; }
+  .progress > div { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+
+  /* TEAM BOARD */
+  .board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .col { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; min-height: 200px; }
+  .col h3 { margin: 0 0 4px; font-size: 14px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+  .col .sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .task { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.45; position: relative; }
+  .task strong { display: block; margin-bottom: 2px; font-weight: 700; color: var(--navy); }
+  .task .when { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-top: 6px; display: block; }
+
+  /* IDEAS */
+  .idea-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .idea { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; position: relative; }
+  .idea .cat { display: inline-block; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .idea h4 { margin: 0 0 4px; font-size: 14px; font-weight: 700; }
+  .idea p { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .idea .audio { display: block; margin-top: 6px; font-size: 11.5px; color: var(--ink-soft); font-style: italic; }
+
+  .section-title { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 22px 0 10px; }
+
+  .reset-btn { background: transparent; border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 11px; color: var(--muted); font-weight: 600; }
+  .reset-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ============ EDIT MODE ============ */
+  .edit-bar { position: fixed; top: 16px; right: 16px; z-index: 100; display: flex; gap: 6px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 6px 6px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+  .edit-bar .status { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin-right: 4px; }
+  .edit-bar .status.saved { color: var(--ok); }
+  .edit-bar button { border: none; background: transparent; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--ink-soft); }
+  .edit-bar button:hover { background: var(--light); }
+  .edit-bar button.primary { background: var(--ink); color: #fff; }
+  .edit-bar button.primary:hover { background: var(--edit); }
+  body.edit .edit-bar button.primary { background: var(--edit); }
+
+  /* When edit mode is on */
+  body.edit [contenteditable="true"] { outline: 1px dashed transparent; transition: all 0.15s ease; padding: 0 2px; border-radius: 3px; }
+  body.edit [contenteditable="true"]:hover { outline-color: var(--edit); background: var(--edit-soft); }
+  body.edit [contenteditable="true"]:focus { outline: 2px solid var(--edit); background: #fff; }
+  body.edit .hero [contenteditable="true"]:hover { background: rgba(255,255,255,0.08); }
+  body.edit .hero [contenteditable="true"]:focus { background: rgba(255,255,255,0.15); outline-color: #ffb1a3; }
+
+  body.edit .pbadge { cursor: pointer; }
+  body.edit .pbadge:hover { transform: scale(1.05); }
+
+  .del-btn { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1; cursor: pointer; display: none; align-items: center; justify-content: center; padding: 0; z-index: 5; }
+  .del-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  body.edit .del-btn { display: flex; }
+
+  .check .del-btn { position: static; margin-left: 4px; flex-shrink: 0; }
+
+  .meta-tag .x { display: none; margin-left: 4px; cursor: pointer; color: var(--accent); font-weight: 800; }
+  body.edit .meta-tag .x { display: inline; }
+
+  .add-btn { background: var(--edit-soft); border: 1px dashed var(--edit); color: var(--edit); padding: 10px 16px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 8px; display: none; }
+  .add-btn:hover { background: var(--edit); color: #fff; }
+  body.edit .add-btn { display: block; }
+
+  .add-tag-btn { display: none; background: var(--edit-soft); border: 1px dashed var(--edit); color: var(--edit); font-size: 10px; padding: 2px 8px; border-radius: 999px; cursor: pointer; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  body.edit .add-tag-btn { display: inline-block; }
+
+  .edit-hint { display: none; background: var(--edit-soft); border: 1px solid var(--edit); color: var(--edit); padding: 12px 16px; border-radius: 12px; font-size: 13px; margin-bottom: 14px; }
+  body.edit .edit-hint { display: block; }
+
+  /* file input hidden */
+  #import-input { display: none; }
+
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; }
+    .pillars, .grid.cols-3, .board, .idea-list, .grid.cols-2 { grid-template-columns: 1fr; }
+    .post { grid-template-columns: 1fr; }
+    .post .type { text-align: left; }
+    .hero h1 { font-size: 26px; }
+    .edit-bar { top: 8px; right: 8px; padding: 4px; }
+    .edit-bar .status { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- EDIT BAR -->
+<div class="edit-bar">
+  <span class="status" id="save-status">View mode</span>
+  <button id="export-btn" title="Download plan as JSON">⬇ Export</button>
+  <button id="import-btn" title="Import a saved plan">⬆ Import</button>
+  <input type="file" id="import-input" accept="application/json" />
+  <button id="reset-all-btn" title="Reset everything to defaults">↺ Reset</button>
+  <button id="edit-toggle" class="primary">✏️ Edit</button>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <div class="hero-head">
+        <svg class="hero-logo" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" aria-label="DT Sports Medicine logo">
+          <g stroke="#F88D2A" stroke-width="4.5" stroke-linecap="round" fill="none">
+            <line x1="20" y1="15" x2="120" y2="75" />
+            <line x1="20" y1="45" x2="120" y2="15" />
+            <line x1="20" y1="45" x2="120" y2="75" />
+            <line x1="20" y1="75" x2="120" y2="15" />
+            <line x1="20" y1="15" x2="120" y2="45" />
+            <line x1="20" y1="75" x2="120" y2="45" />
+            <line x1="20" y1="45" x2="120" y2="45" />
+          </g>
+          <g fill="#F88D2A">
+            <circle cx="20" cy="15" r="6.5" />
+            <circle cx="20" cy="45" r="6.5" />
+            <circle cx="20" cy="75" r="6.5" />
+            <circle cx="120" cy="15" r="6.5" />
+            <circle cx="120" cy="45" r="6.5" />
+            <circle cx="120" cy="75" r="6.5" />
+          </g>
+        </svg>
+        <div class="hero-divider"></div>
+        <div class="hero-wordmark">
+          <span class="wm-1">DT SPORTS</span>
+          <span class="wm-2">MEDICINE</span>
+        </div>
+      </div>
+      <div class="eyebrow"><span class="tag" data-edit="hero.tag">Launch Plan</span> &nbsp; <span data-edit="hero.eyebrow">Friday 22 May 2026</span></div>
+      <h1 data-edit="hero.title">Clinic Launch Content Playbook</h1>
+      <p data-edit="hero.subtitle">Rehab with purpose, performance with precision. A 30-day Instagram &amp; TikTok plan to build anticipation, pack the opening, and turn day-one buzz into a full appointment book.</p>
+    </div>
+    <div class="countdown" id="countdown">
+      <h3>Countdown to doors open</h3>
+      <div class="cd-grid">
+        <div class="cd-cell"><div class="n" id="cd-d">—</div><div class="l">Days</div></div>
+        <div class="cd-cell"><div class="n" id="cd-h">—</div><div class="l">Hours</div></div>
+        <div class="cd-cell"><div class="n" id="cd-m">—</div><div class="l">Min</div></div>
+        <div class="cd-cell"><div class="n" id="cd-s">—</div><div class="l">Sec</div></div>
+      </div>
+      <div class="cd-launch" id="cd-launch">Launching Fri 22 May · 9:00am</div>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-panel="overview">Overview</button>
+    <button class="tab" data-panel="timeline">Timeline</button>
+    <button class="tab" data-panel="calendar">Content Calendar</button>
+    <button class="tab" data-panel="ideas">Post Idea Library</button>
+    <button class="tab" data-panel="checklist">Build-Out Checklist</button>
+    <button class="tab" data-panel="team">Team Board</button>
+  </nav>
+
+  <div class="edit-hint">
+    <strong>Edit mode is on.</strong> Click any text to edit it. Hover any item to delete (×). Click platform badges on posts to toggle Instagram / TikTok. Use the buttons at the bottom of each list to add new items. Changes save automatically to your browser.
+  </div>
+
+  <!-- OVERVIEW PANEL -->
+  <section class="panel active" id="overview">
+    <div class="grid cols-3" id="phase-cards"></div>
+
+    <div class="section-title">Content Pillars</div>
+    <div class="pillars" id="pillars"></div>
+    <button class="add-btn" data-add="pillar">+ Add pillar</button>
+
+    <div class="section-title">North-Star Metrics (First 30 Days)</div>
+    <div class="grid cols-3" id="metrics"></div>
+    <button class="add-btn" data-add="metric">+ Add metric</button>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="panel" id="timeline">
+    <div class="card" style="margin-bottom:10px;">
+      <h3>Launch Sequence</h3>
+      <div class="muted">From the final 48 hours through the first month — every key moment.</div>
+    </div>
+    <div class="timeline" id="timeline-list"></div>
+    <button class="add-btn" data-add="timeline">+ Add timeline item</button>
+  </section>
+
+  <!-- CONTENT CALENDAR -->
+  <section class="panel" id="calendar">
+    <div class="card" style="margin-bottom:14px;">
+      <h3>Filter the calendar</h3>
+      <div class="muted">Filter by phase or platform. Every entry is a real post you can shoot.</div>
+      <div class="filters" style="margin-top:14px;">
+        <span class="lbl">Phase:</span>
+        <button class="chip on" data-filter="phase" data-value="all">All</button>
+        <button class="chip" data-filter="phase" data-value="pre">Pre-launch</button>
+        <button class="chip" data-filter="phase" data-value="launch">Launch</button>
+        <button class="chip" data-filter="phase" data-value="week1">Week 1</button>
+        <button class="chip" data-filter="phase" data-value="week2">Week 2</button>
+        <button class="chip" data-filter="phase" data-value="week3">Week 3</button>
+        <button class="chip" data-filter="phase" data-value="week4">Week 4</button>
+      </div>
+      <div class="filters">
+        <span class="lbl">Platform:</span>
+        <button class="chip on" data-filter="platform" data-value="all">All</button>
+        <button class="chip ig" data-filter="platform" data-value="ig"><span class="dot"></span>Instagram</button>
+        <button class="chip tt" data-filter="platform" data-value="tt"><span class="dot"></span>TikTok</button>
+      </div>
+    </div>
+
+    <div class="post-list" id="post-list"></div>
+    <button class="add-btn" data-add="post">+ Add post</button>
+  </section>
+
+  <!-- POST IDEA LIBRARY -->
+  <section class="panel" id="ideas">
+    <div class="card" style="margin-bottom:14px;">
+      <h3>Plug-and-play post ideas</h3>
+      <div class="muted">35+ fun, on-brand concepts to grab whenever the calendar needs filling. Mix-and-match across IG and TikTok.</div>
+    </div>
+    <div class="idea-list" id="idea-list"></div>
+    <button class="add-btn" data-add="idea">+ Add idea</button>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="panel" id="checklist">
+    <div class="card" style="margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+      <div>
+        <h3>Build-out &amp; launch checklist</h3>
+        <div class="muted">Tick as you go — progress saves automatically to your browser.</div>
+        <div class="progress" style="width:240px;"><div id="progress-bar" style="width:0%"></div></div>
+      </div>
+      <button class="reset-btn" id="reset-checks">Reset progress</button>
+    </div>
+    <div id="check-sections"></div>
+    <button class="add-btn" data-add="check-section">+ Add checklist section</button>
+  </section>
+
+  <!-- TEAM BOARD -->
+  <section class="panel" id="team">
+    <div class="card" style="margin-bottom:14px;">
+      <h3>Team-of-3 task board</h3>
+      <div class="muted">Three lanes you can divide however you like — each lane is a coherent role. Drag tasks mentally to whichever teammate fits.</div>
+    </div>
+    <div class="board" id="board"></div>
+  </section>
+
+</div>
+
+<script>
+  // ========== DEFAULT DATA ==========
+  const DEFAULTS = {
+    hero: {
+      tag: "Launch Plan",
+      eyebrow: "Friday 22 May 2026",
+      title: "Clinic Launch Content Playbook",
+      subtitle: "Rehab with purpose, performance with precision. A 30-day Instagram & TikTok plan to build anticipation, pack the opening, and turn day-one buzz into a full appointment book."
+    },
+    phases: [
+      { label: "Phase 1 · Final Countdown", stat: "2 days", note: "20–21 May · Behind-the-scenes build-out, team teasers, ticking countdown." },
+      { label: "Phase 2 · Launch Day", stat: "22 May", note: "Doors-open Reel, ribbon-cut, live Stories, first-patient moment." },
+      { label: "Phase 3 · First 30 Days", stat: "30 posts", note: "Service spotlights, testimonials, education, trending audio, community." }
+    ],
+    pillars: [
+      { badge: "Pillar 1", title: "Behind the Build", desc: "Time-lapses, \"before/after,\" equipment unboxings, paint going on the walls. Raw, energetic, human." },
+      { badge: "Pillar 2", title: "Meet the Team", desc: "Founder story, clinician intros, \"why we got into this.\" Faces sell the practice." },
+      { badge: "Pillar 3", title: "Service in Action", desc: "Injury Clinic, Sports Massage, Concussion Clinic, Student Clinic — show, don't tell." },
+      { badge: "Pillar 4", title: "Educate & Trend", desc: "Myth-busting Reels, \"3 things athletes get wrong,\" trending audio applied to clinic life." }
+    ],
+    metrics: [
+      { label: "Bookings driven by social", stat: "40+" },
+      { label: "Open House attendees", stat: "75+" },
+      { label: "Instagram followers", stat: "+500" }
+    ],
+    timeline: [
+      { when: "Wed 20 May · T-2", title: "Tease the build", desc: "Shaky-cam Story of an empty room: \"It's coming.\" Drop a Reel time-lapse of the build-out so far set to a hype track.", launch: false },
+      { when: "Thu 21 May · T-1", title: "The night before", desc: "\"24 hours\" Reel cutting between final equipment placement, signage going up, and the team smiling. Story countdown sticker.", launch: false },
+      { when: "Fri 22 May · LAUNCH", title: "Doors open", desc: "9am: keys-in-the-door Reel, ribbon cut. All-day Stories of first patients, treatment rooms in use, team reactions. Go-live IG post with full clinic walk-through.", launch: true },
+      { when: "Sat 23 May", title: "Open House / first weekend", desc: "Public open-house Reel — free sports massage tasters, concussion screening demos. Capture every smile.", launch: false },
+      { when: "Mon 26 – Sun 1 Jun · Week 1", title: "Service spotlights", desc: "One service per day: Injury Clinic, Sports Massage, Concussion Clinic, Student Clinic, Personal Training, Team Medical Support. Each gets a Reel + carousel.", launch: false },
+      { when: "Mon 2 – Sun 8 Jun · Week 2", title: "Trust & testimonials", desc: "First patient testimonials roll out. \"Why I chose DT\" video. Concussion myth-busting Reel. Local sports club partnership announcement.", launch: false },
+      { when: "Mon 9 – Sun 15 Jun · Week 3", title: "Education & trend riding", desc: "\"3 things athletes get wrong about recovery\" Reel. Trending audio applied to clinic life. Day-in-the-life TikTok with a clinician.", launch: false },
+      { when: "Mon 16 – Sun 21 Jun · Week 4", title: "Community + momentum push", desc: "Local gym takeover, Q&A Stories, \"30 days in\" recap Reel. Push student clinic for university summer term.", launch: false }
+    ],
+    posts: [
+      { date: "Wed 20 May", day: "T-2", phase: "pre", platforms: ["ig","tt"], type: "Reel + Story", title: "\"It's coming.\" — empty room teaser", copy: "Shaky vertical clip walking into the empty treatment room. Text overlay: \"48 hours.\" Set to a building hype track. End on the DT logo decal.", tags: ["BTS","Build-out","Hype"] },
+      { date: "Wed 20 May", day: "T-2", phase: "pre", platforms: ["ig"], type: "Carousel", title: "The vision board → reality", copy: "Side-by-side: original architect sketch / mood board vs the actual space taking shape. Caption: \"Two years in the making.\"", tags: ["Story","Founder"] },
+      { date: "Thu 21 May", day: "T-1", phase: "pre", platforms: ["ig","tt"], type: "Reel", title: "24-hour time-lapse", copy: "Cuts between equipment unboxing, signage going up, paint drying, team laughing, last box flattened. Voiceover: \"This time tomorrow we open the doors.\"", tags: ["Time-lapse","BTS","Trend"] },
+      { date: "Thu 21 May", day: "T-1", phase: "pre", platforms: ["ig"], type: "Story countdown", title: "Countdown sticker goes live", copy: "Story with countdown sticker set to 9am Friday. Pinned to top of profile. Repost to highlight reel \"Launch Day.\"", tags: ["Story","Engagement"] },
+      { date: "Thu 21 May", day: "T-1", phase: "pre", platforms: ["tt"], type: "TikTok", title: "Trending audio: \"Tell me you're a sports med clinic\"", copy: "Quick cuts: massage gun, foam roller stack, taping kit, concussion baseline app, team kit hung up. Use trending audio of the week.", tags: ["Trend","Light"] },
+      { date: "Fri 22 May", day: "LAUNCH", phase: "launch", platforms: ["ig","tt"], type: "Reel (Hero)", title: "Doors open — keys-in-the-door", copy: "9am sharp. Cinematic clip: keys turning, lights flicking on, team walking in, ribbon cut. End on \"DT Sports Medicine — now open.\" Pin to grid.", tags: ["Hero","Launch"] },
+      { date: "Fri 22 May", day: "LAUNCH", phase: "launch", platforms: ["ig"], type: "Carousel", title: "Walk-through: every room", copy: "10 photos. Reception → clinic room → massage room → concussion suite → gym floor → kettle. Caption: \"Come and see for yourself.\" CTA to booking link.", tags: ["Tour","CTA"] },
+      { date: "Fri 22 May", day: "LAUNCH", phase: "launch", platforms: ["ig"], type: "Stories all day", title: "Live Story takeover", copy: "Hourly Stories: first patient through the door, first coffee, first invoice, first massage. End-of-day team selfie. Save to a highlight.", tags: ["Live","Engagement"] },
+      { date: "Fri 22 May", day: "LAUNCH", phase: "launch", platforms: ["tt"], type: "TikTok", title: "\"POV: it's opening day\"", copy: "Handheld, first-person POV walking in, greeting the team, prepping first treatment. Caption layered with the clinic's mission line.", tags: ["POV","Trend"] },
+      { date: "Sat 23 May", day: "Open House", phase: "launch", platforms: ["ig","tt"], type: "Reel", title: "Open House highlights", copy: "Fast-cut Reel of the crowd, sports massage tasters, concussion screening demo, kids trying the gym kit. End with the team waving thanks.", tags: ["Event","Community"] },
+      { date: "Sun 24 May", day: "Day 3", phase: "launch", platforms: ["ig"], type: "Carousel", title: "Thank-you post", copy: "Photos from the weekend with a heartfelt caption. Tag every local partner, sponsor and gym that came. Reciprocal tags = reach.", tags: ["Gratitude","Partnerships"] },
+      { date: "Mon 26 May", day: "W1 D1", phase: "week1", platforms: ["ig","tt"], type: "Reel", title: "Service Spotlight: Injury Clinic", copy: "60-second Reel: \"What happens in your first injury clinic appointment.\" Walk through assessment → diagnosis → plan. End with booking CTA.", tags: ["Education","Service"] },
+      { date: "Tue 27 May", day: "W1 D2", phase: "week1", platforms: ["ig","tt"], type: "Reel", title: "Service Spotlight: Sports Massage", copy: "Satisfying close-ups of hands working on shoulders, calves, hamstrings. ASMR audio. Text: \"60 minutes. Worth every one.\"", tags: ["ASMR","Service"] },
+      { date: "Wed 28 May", day: "W1 D3", phase: "week1", platforms: ["ig"], type: "Carousel", title: "Service Spotlight: Concussion Clinic", copy: "5-slide explainer: what is a concussion, why baseline testing matters, who needs it, what we do, how to book. Saved as a highlight.", tags: ["Education","Specialism"] },
+      { date: "Thu 29 May", day: "W1 D4", phase: "week1", platforms: ["ig","tt"], type: "Reel", title: "Service Spotlight: Student Clinic", copy: "Two students working with a clinician. Caption: \"Discounted care, expert-supervised. Built for athletes on a budget.\" Tag local uni sports clubs.", tags: ["Student","Community"] },
+      { date: "Fri 30 May", day: "W1 D5", phase: "week1", platforms: ["ig","tt"], type: "Reel", title: "Service Spotlight: Personal Training", copy: "Trainer guiding rehab-led strength session. Show progression: \"Week 1\" → \"Week 6.\" Trending hype track.", tags: ["PT","Transformation"] },
+      { date: "Sat 31 May", day: "W1 D6", phase: "week1", platforms: ["ig"], type: "Post", title: "Service Spotlight: Team Medical Support", copy: "Pitch-side photo with a local club. Caption explaining match-day medical cover. Strong B2B hook for clubs that need cover this season.", tags: ["B2B","Partnerships"] },
+      { date: "Sun 1 Jun", day: "W1 D7", phase: "week1", platforms: ["ig"], type: "Story poll", title: "Week 1 wrap + poll", copy: "\"Which service do you want to see more of?\" Story poll with the 6 services. Reshares + drives next week's content.", tags: ["Engagement","Poll"] },
+      { date: "Mon 2 Jun", day: "W2 D1", phase: "week2", platforms: ["ig","tt"], type: "Reel", title: "First patient testimonial", copy: "Talking-head 30s clip from a real patient. Lower-third with name + sport. End on logo. Cross-post as Reel + TikTok.", tags: ["Testimonial","Trust"] },
+      { date: "Tue 3 Jun", day: "W2 D2", phase: "week2", platforms: ["ig"], type: "Carousel", title: "Concussion myths: busted", copy: "5 myths, 5 facts. Strong design. Save-worthy. Caption invites parents to book a baseline assessment for their kids before season starts.", tags: ["Education","Myth-bust"] },
+      { date: "Wed 4 Jun", day: "W2 D3", phase: "week2", platforms: ["tt"], type: "TikTok", title: "\"Why I chose DT\"", copy: "Short patient vox-pops. 3 patients, 10 seconds each, same question: \"Why DT?\" Pacey edit, natural lighting.", tags: ["Testimonial","Vox-pop"] },
+      { date: "Thu 5 Jun", day: "W2 D4", phase: "week2", platforms: ["ig","tt"], type: "Reel", title: "Partnership announcement", copy: "Drop a partnership with a local sports club or gym. Joint Reel with their captain/coach. Cross-tag for double reach.", tags: ["Partnership","Community"] },
+      { date: "Fri 6 Jun", day: "W2 D5", phase: "week2", platforms: ["ig"], type: "Reel", title: "Before / after", copy: "Range-of-motion before vs after a 6-week program. Side-by-side split screen. Caption: \"This is what rehab with purpose looks like.\"", tags: ["Transformation","Proof"] },
+      { date: "Sat 7 Jun", day: "W2 D6", phase: "week2", platforms: ["ig"], type: "Story Q&A", title: "AMA with a clinician", copy: "1-hour Story Q&A. Collect questions in advance, answer in 15-second clips. Save to highlight \"Ask DT.\"", tags: ["Q&A","Engagement"] },
+      { date: "Sun 8 Jun", day: "W2 D7", phase: "week2", platforms: ["ig"], type: "Post", title: "Two-week recap", copy: "Carousel of the best 10 moments from launch + week 1+2. Caption: \"Two weeks in. Thank you.\" Tag every patient who consented.", tags: ["Recap","Gratitude"] },
+      { date: "Mon 9 Jun", day: "W3 D1", phase: "week3", platforms: ["ig","tt"], type: "Reel", title: "3 things athletes get wrong about recovery", copy: "Fast-paced, captioned, no music needed. Each point = one b-roll clip. Save-worthy. End with: \"Book a screen — link in bio.\"", tags: ["Education","Hook"] },
+      { date: "Tue 10 Jun", day: "W3 D2", phase: "week3", platforms: ["tt"], type: "TikTok", title: "Day-in-the-life of a clinician", copy: "GoPro-style follow from coffee to last patient. Cut to 60s. Caption: \"What a sports med clinician actually does all day.\"", tags: ["DITL","Team"] },
+      { date: "Wed 11 Jun", day: "W3 D3", phase: "week3", platforms: ["ig","tt"], type: "Reel", title: "Trend: \"Things in our clinic that just make sense\"", copy: "Quick cuts: heated treatment beds, clean towel stack, branded water bottles, the playlist, the calm reception. Trending audio.", tags: ["Trend","Aesthetic"] },
+      { date: "Thu 12 Jun", day: "W3 D4", phase: "week3", platforms: ["ig"], type: "Carousel", title: "Return-to-sport pathway", copy: "Infographic-style: the 5 stages we use to safely return an athlete to competition. Save-worthy. Tag local coaches.", tags: ["Education","Save"] },
+      { date: "Fri 13 Jun", day: "W3 D5", phase: "week3", platforms: ["tt"], type: "TikTok", title: "POV: you just rolled your ankle", copy: "Skit-style POV with a clinician walking you through the first 60 minutes. Trending POV audio. Education wrapped in entertainment.", tags: ["Skit","Education"] },
+      { date: "Sat 14 Jun", day: "W3 D6", phase: "week3", platforms: ["ig","tt"], type: "Reel", title: "Sports massage in 4K", copy: "Slow-motion, perfectly lit close-ups. Calm ambient track. Caption is one line: \"Book yours.\" Aesthetic flex.", tags: ["ASMR","Aesthetic"] },
+      { date: "Sun 15 Jun", day: "W3 D7", phase: "week3", platforms: ["ig"], type: "Story", title: "Open question to followers", copy: "\"What's the one injury you can never seem to shake?\" Replies become next month's content engine.", tags: ["Engagement","Research"] },
+      { date: "Mon 16 Jun", day: "W4 D1", phase: "week4", platforms: ["ig","tt"], type: "Reel", title: "Local gym takeover", copy: "Visit a partner gym, screen 5 members, post the highlights. Collab post = double the reach.", tags: ["Collab","Community"] },
+      { date: "Tue 17 Jun", day: "W4 D2", phase: "week4", platforms: ["ig"], type: "Carousel", title: "Meet the team — full lineup", copy: "One slide per team member. Headshot + one fun fact + their specialty. Tag each person. Repostable to highlights.", tags: ["Team","Trust"] },
+      { date: "Wed 18 Jun", day: "W4 D3", phase: "week4", platforms: ["tt"], type: "TikTok", title: "\"Rate my clinic setup\"", copy: "Trending \"rate my\" format applied to your treatment room. Light, fun, invites engagement.", tags: ["Trend","Light"] },
+      { date: "Thu 19 Jun", day: "W4 D4", phase: "week4", platforms: ["ig","tt"], type: "Reel", title: "Student clinic recruitment push", copy: "Aimed at university summer term: \"Half-price recovery sessions, expert-supervised.\" Tag uni sports clubs.", tags: ["Student","Conversion"] },
+      { date: "Fri 20 Jun", day: "W4 D5", phase: "week4", platforms: ["ig"], type: "Reel", title: "Testimonial #2", copy: "Second patient story. Different demographic to the first. Builds trust across audiences.", tags: ["Testimonial","Trust"] },
+      { date: "Sat 21 Jun", day: "W4 D6", phase: "week4", platforms: ["ig","tt"], type: "Reel", title: "\"30 days in\" recap", copy: "Cinematic 60-second recap of the month — launch, open house, patients, partnerships, team. Caption: \"Thanks for showing up.\"", tags: ["Recap","Hero"] },
+      { date: "Sun 22 Jun", day: "W4 D7", phase: "week4", platforms: ["ig"], type: "Story", title: "Looking ahead", copy: "Tease what's coming in month 2: workshops, school visits, athlete partnerships. Sets up the next phase.", tags: ["Tease","Momentum"] }
+    ],
+    ideas: [
+      { cat: "Behind the Build", title: "Box-fort confessions", desc: "Sit on a pile of empty boxes, share the most chaotic moment of the build-out so far. Raw and human.", audio: "" },
+      { cat: "Behind the Build", title: "Equipment ASMR", desc: "Unbox the new massage gun / ultrasound machine / shockwave kit. Tight close-ups, satisfying audio, no music.", audio: "" },
+      { cat: "Behind the Build", title: "Paint-roller race", desc: "Three teammates, three walls, who finishes first. Silly, shareable, gets faces on camera.", audio: "Trending sports commentary audio" },
+      { cat: "Behind the Build", title: "Signage reveal", desc: "Cover the new outdoor sign with a sheet. Pull it down on camera. Whoop, cheers, slow-mo.", audio: "" },
+      { cat: "Meet the Team", title: "Two truths and a sprain", desc: "Each clinician shares two truths and one fictional injury they 'treated.' Audience guesses.", audio: "" },
+      { cat: "Meet the Team", title: "Founder origin story", desc: "Two-minute talking-head: why this clinic exists, who it's for. Pin to the grid.", audio: "" },
+      { cat: "Meet the Team", title: "Coffee order = clinical style", desc: "Reel matching each team member's coffee order to their clinical personality. Fun, casual, lands the team's vibe.", audio: "" },
+      { cat: "Meet the Team", title: "Who said it: athlete or clinician", desc: "Skit-style guessing game. Quotes about pain, recovery, motivation. Cross-tag local athletes.", audio: "Trending quiz audio" },
+      { cat: "Service in Action", title: "First-appointment walk-through", desc: "POV from booking to leaving. Sets expectations, removes friction, drives bookings.", audio: "" },
+      { cat: "Service in Action", title: "Sports massage in slow-mo", desc: "Beautifully lit, slow-motion hands-on-shoulder. Caption: one word — 'Yes.'", audio: "Calm ambient" },
+      { cat: "Service in Action", title: "Concussion baseline demo", desc: "Show the screen, show the test, show the score. Demystify the process.", audio: "" },
+      { cat: "Service in Action", title: "Taping tutorial", desc: "60-second ankle tape job. Save-worthy. Coaches and parents will share.", audio: "" },
+      { cat: "Educate & Trend", title: "Myth vs Fact", desc: "Carousel — 5 myths about recovery / concussion / sports massage. High contrast design.", audio: "" },
+      { cat: "Educate & Trend", title: "'Tell me you're a sports clinic'", desc: "Trend format applied to the clinic — taping tape stacks, massage guns, ice baths.", audio: "Trending tell-me-without audio" },
+      { cat: "Educate & Trend", title: "'Things that just make sense in our clinic'", desc: "Aesthetic trend — clean towels, branded mugs, lighting, the team playlist.", audio: "Trending 'just makes sense' audio" },
+      { cat: "Educate & Trend", title: "POV: you just rolled your ankle", desc: "Skit. Clinician walks you through the first 60 minutes. Trending POV audio.", audio: "Trending POV audio" },
+      { cat: "Educate & Trend", title: "3 things you're doing wrong in your warm-up", desc: "Fast, captioned, no music. Built to be saved and shared.", audio: "" },
+      { cat: "Community", title: "Local-athlete shoutouts", desc: "Repost local athletes' wins with a kind note. They reshare. Free reach + goodwill.", audio: "" },
+      { cat: "Community", title: "Open-house highlight reel", desc: "Crowd, faces, tasters, raffle winners. Fast-cut, joyful.", audio: "Upbeat trending track" },
+      { cat: "Community", title: "Coach-of-the-week feature", desc: "Mini-profile of a local coach who refers patients. They share, their athletes see you.", audio: "" },
+      { cat: "Community", title: "Sponsor a Sunday run", desc: "Tag along with a local running club, hand out branded water bottles, film highlights.", audio: "" },
+      { cat: "Patient Stories", title: "30-second testimonial", desc: "One patient, one sport, one transformation. Lower-third, logo end-card.", audio: "" },
+      { cat: "Patient Stories", title: "Before / after range-of-motion", desc: "Split-screen ROM at session 1 vs session 6. Proof that converts.", audio: "" },
+      { cat: "Patient Stories", title: "Return-to-sport moment", desc: "Capture a patient's first training session back. Goosebumps. Get consent.", audio: "Cinematic build" },
+      { cat: "Patient Stories", title: "Voicemail testimonials", desc: "Patients leave a voicemail, you turn it into a Reel with on-screen text + b-roll.", audio: "Patient's own voice" },
+      { cat: "Light & Fun", title: "Rate this taping job", desc: "Audience scores your tape job out of 10. Lighthearted, invites engagement.", audio: "" },
+      { cat: "Light & Fun", title: "Reception desk plant has a name", desc: "Build a soft, ongoing bit around an office mascot — plant, dog, whiteboard quote. Lore is sticky.", audio: "" },
+      { cat: "Light & Fun", title: "Team playlist drop", desc: "Share the Spotify playlist that plays in the clinic. Followers save = warm impressions.", audio: "" },
+      { cat: "Light & Fun", title: "'Things patients say'", desc: "Skit-style. Each clinician reenacts a relatable patient line. Cathartic for athletes.", audio: "Trending dialogue audio" },
+      { cat: "Conversion", title: "Booking-link CTA reel", desc: "30 seconds, one clear ask: 'Book a free 15-minute consult this week — link in bio.'", audio: "" },
+      { cat: "Conversion", title: "Limited-time student deal", desc: "Carousel announcing student clinic discount. Tag every uni sports club in the area.", audio: "" },
+      { cat: "Conversion", title: "Team medical support B2B", desc: "Pitch-side photo + 'Need cover for next season? DM us.' Targets local clubs directly.", audio: "" },
+      { cat: "Recap & Momentum", title: "Day-1 recap at midnight", desc: "End of launch day. Empty clinic, lights low, voiceover from the founder. Quiet, emotional.", audio: "Soft acoustic" },
+      { cat: "Recap & Momentum", title: "'30 days in' cinematic recap", desc: "60-second highlight reel of the whole month. The hero post for month two's launch.", audio: "Cinematic" },
+      { cat: "Recap & Momentum", title: "What's next teaser", desc: "Tease month two: workshops, athlete partnerships, school visits. Keeps the audience leaning in.", audio: "" }
+    ],
+    checks: [
+      {
+        heading: "Space — physical build-out",
+        sub: "Get the room camera-ready, not just patient-ready.",
+        items: [
+          ["Branded signage installed outside and at reception", "External + internal — needed for all 'walk-through' content"],
+          ["Treatment rooms styled & decluttered for photography", "Even the cable tucks matter on camera"],
+          ["Lighting check in every room (warm, no harsh shadow)", "Buy 1–2 portable LED panels if needed"],
+          ["Branded towels, water bottles, and merch on shelves", "Subtle background branding shows up in every shot"],
+          ["Plant / mascot / on-brand prop at reception", "Becomes recurring visual signature across content"],
+          ["Treatment beds dressed identically across rooms", "Consistency = scroll-stopping aesthetic"],
+          ["Wall decal / logo wall for portrait headshots", "Team headshots, testimonials, before/afters"]
+        ]
+      },
+      {
+        heading: "Content kit",
+        sub: "Have the gear ready by Thursday night.",
+        items: [
+          ["Phone with clean storage (50GB+ free)", "Don't get caught at 9am with full storage"],
+          ["Portable tripod + clip-on mic", "Audio matters more than pixels for testimonials"],
+          ["Ring light or LED panel", "For interview clips in low-light rooms"],
+          ["B-roll shot list printed and pinned", "Equipment, hands, doorway, reception, team — 30 clips in the bank"],
+          ["Patient consent form drafted + printed", "Get sign-off before any patient appears on camera"],
+          ["Brand caption template + 30 hashtags saved", "Drop into every post — don't reinvent each time"],
+          ["Trending audio shortlist saved in TikTok + IG Reels", "Curate 5 fresh sounds every Monday"]
+        ]
+      },
+      {
+        heading: "Pre-launch — Wednesday + Thursday",
+        sub: "Last 48 hours. Move fast.",
+        items: [
+          ["Update IG bio: address, hours, booking link, 'Now open Fri 22 May'", "Pinned to top of profile"],
+          ["Story countdown sticker live (Thu)", "Engagements get notified at launch"],
+          ["Existing patient email blast: 'We're open Friday'", "Your warmest audience converts first"],
+          ["Press release / local-paper email sent", "Sports-clinic launches are local-news bait"],
+          ["Open House event page live + boosted £50", "Sat 23 May — free tasters and demos"],
+          ["Google Business profile updated with photos + hours", "Search drives first-week walk-ins"],
+          ["WhatsApp / DM templates ready for booking enquiries", "Speed of reply = booking conversion"],
+          ["3 teaser Reels filmed + scheduled", "Pre-launch + launch-eve + 9am Friday"]
+        ]
+      },
+      {
+        heading: "Launch Day — Friday 22 May",
+        sub: "Capture everything. You'll only do this once.",
+        items: [
+          ["9am: doors-open Reel goes live", "Hero post. Pin to grid."],
+          ["Walk-through carousel published by 10am", "Anyone curious about the space lands here"],
+          ["Hourly Stories all day", "Every milestone — first patient, first coffee, first invoice"],
+          ["End-of-day team reaction Reel filmed", "Real emotion sells the brand"],
+          ["DMs and comments answered within 15 minutes", "Speed = trust in the first week"],
+          ["Tag every supplier, contractor, designer in Stories", "They reshare → free reach"],
+          ["Backup phone fully charged + storage cleared", "Don't lose launch-day footage"]
+        ]
+      },
+      {
+        heading: "Open House — Saturday 23 May",
+        sub: "Turn neighbours into patients.",
+        items: [
+          ["Free sports massage tasters bookable in advance", "Drives RSVPs + a follow-up email list"],
+          ["Concussion baseline demo running on the hour", "Show the specialism — sets you apart locally"],
+          ["Branded freebies at the door (bottles / tape)", "Walks out the door with your logo on it"],
+          ["Raffle: 1 free 6-week PT block", "Email capture engine — drives next month's bookings"],
+          ["Designated photographer for the day", "One person, one job — capture for next 30 days of content"],
+          ["Highlight reel published by Sunday evening", "Don't let momentum cool overnight"]
+        ]
+      },
+      {
+        heading: "Operational ready-state",
+        sub: "Don't let comms get ahead of capacity.",
+        items: [
+          ["Online booking tested end-to-end on mobile", "Most traffic from socials = mobile"],
+          ["Payment flow tested with real card", "Day-one card decline is a brand-killer"],
+          ["Team WhatsApp group for content drops + approvals", "Speeds up the post-approve loop"],
+          ["Reply SLA agreed (e.g., DMs within 30 min, 9–6)", "Set it. Hit it."],
+          ["First-week diary capacity-checked", "Don't overbook before workflows are tested"],
+          ["Insurance & professional registrations on display", "Trust signal — photograph and post too"]
+        ]
+      },
+      {
+        heading: "First 30 days — keep the engine running",
+        sub: "Repeatable weekly cadence.",
+        items: [
+          ["Monday: plan the week's posts + book filming slots", "30 minutes, all three teammates"],
+          ["Weekly: 1 hour shooting block on-site", "Batch-shoot 5–7 clips in one go"],
+          ["Weekly: 1 patient testimonial captured (with consent)", "The single highest-converting content type"],
+          ["Friday: review week's analytics (reach, saves, DMs)", "What worked → do more next week"],
+          ["Reshare the best 3 Stories to highlights weekly", "Highlights are your shop window"],
+          ["Reply to every comment + DM personally for 30 days", "Set the tone now — automate later"]
+        ]
+      }
+    ],
+    board: [
+      {
+        title: "Lane A · Capture",
+        sub: "The one with the phone. Shoots everything.",
+        tasks: [
+          { t: "Daily phone-photographer", w: "Every day", d: "Captures b-roll, faces, hands, moments. Sends to Lane B by 5pm." },
+          { t: "Launch-day on-camera lead", w: "Fri 22 May", d: "Shoots ribbon-cut, walk-through, first-patient reaction. Backup phone in pocket." },
+          { t: "Weekly batch-shoot session", w: "Every Monday", d: "1 hour. Shoot 5–7 clips against the week's calendar." },
+          { t: "Patient consent + capture", w: "Ongoing", d: "Asks consent, films testimonials, captures before/after ROM clips." },
+          { t: "Open-house photographer", w: "Sat 23 May", d: "One job all day: capture every interaction for the next 30 days of content." }
+        ]
+      },
+      {
+        title: "Lane B · Publish",
+        sub: "Edits, captions, hashtags, schedules, replies.",
+        tasks: [
+          { t: "Edit + schedule daily post", w: "Every day", d: "Cuts the day's clips. Drafts caption + hashtags. Schedules via Meta Business Suite + TikTok." },
+          { t: "Run the countdown + Stories", w: "Thu 21 → Fri 22", d: "Countdown sticker, hourly Stories on launch day, highlights saved by Saturday." },
+          { t: "Reply to DMs + comments", w: "Daily, 9–6", d: "30-minute SLA in the first week. Books appointments straight from DMs." },
+          { t: "Friday analytics review", w: "Every Friday", d: "Reach, saves, DMs, profile visits. One-paragraph summary to the team." },
+          { t: "Curate trending audio", w: "Every Monday", d: "Save 5 fresh sounds in IG Reels + TikTok for the week's content." }
+        ]
+      },
+      {
+        title: "Lane C · Run the Room",
+        sub: "Build-out, suppliers, open-house logistics, on-site.",
+        tasks: [
+          { t: "Build-out finish list", w: "Wed 20 → Thu 21", d: "Signage, decals, plant, equipment placement, lighting. Room is camera-ready by Thursday night." },
+          { t: "Supplier + contractor liaison", w: "Ongoing", d: "Final snagging, branded freebies arriving, raffle prize logistics." },
+          { t: "Open House logistics", w: "Sat 23 May", d: "Bookings spreadsheet, raffle, freebies, demo schedule, refreshments." },
+          { t: "Booking-flow + payment tests", w: "Thu 21 May", d: "Test on mobile end-to-end. Friction kills conversion in week one." },
+          { t: "Local partnership outreach", w: "Weeks 2–4", d: "Cold-DM 10 local clubs, gyms, schools for collab Reels + B2B medical support." }
+        ]
+      }
+    ]
+  };
+
+  // ========== STATE & PERSISTENCE ==========
+  const STORE_KEY = "dt-plan-v2";
+  let data = loadData();
+  let editMode = false;
+
+  function loadData() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Merge with defaults to make sure any new fields appear
+        return Object.assign(JSON.parse(JSON.stringify(DEFAULTS)), parsed);
+      }
+    } catch (e) {}
+    return JSON.parse(JSON.stringify(DEFAULTS));
+  }
+  function saveData() {
+    localStorage.setItem(STORE_KEY, JSON.stringify(data));
+    flashSaved();
+  }
+  let saveTimer;
+  function flashSaved() {
+    clearTimeout(saveTimer);
+    const el = document.getElementById("save-status");
+    el.textContent = "Saved ✓";
+    el.classList.add("saved");
+    saveTimer = setTimeout(() => {
+      el.classList.remove("saved");
+      el.textContent = editMode ? "Edit mode" : "View mode";
+    }, 1400);
+  }
+
+  // ========== COUNTDOWN ==========
+  const launchAt = new Date("2026-05-22T09:00:00+01:00").getTime();
+  function tick() {
+    const now = Date.now();
+    let diff = launchAt - now;
+    const cdLaunch = document.getElementById("cd-launch");
+    if (diff <= 0) {
+      document.getElementById("cd-d").textContent = "0";
+      document.getElementById("cd-h").textContent = "0";
+      document.getElementById("cd-m").textContent = "0";
+      document.getElementById("cd-s").textContent = "0";
+      cdLaunch.textContent = "DOORS ARE OPEN.";
+      cdLaunch.style.color = "#fff";
+      return;
+    }
+    const d = Math.floor(diff / 86400000); diff -= d*86400000;
+    const h = Math.floor(diff / 3600000); diff -= h*3600000;
+    const m = Math.floor(diff / 60000); diff -= m*60000;
+    const s = Math.floor(diff / 1000);
+    document.getElementById("cd-d").textContent = d;
+    document.getElementById("cd-h").textContent = h;
+    document.getElementById("cd-m").textContent = m;
+    document.getElementById("cd-s").textContent = s;
+  }
+  tick(); setInterval(tick, 1000);
+
+  // ========== TABS ==========
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.panel).classList.add("active");
+    });
+  });
+
+  // ========== HELPERS ==========
+  function esc(s) { return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function ce(html) { return `contenteditable="${editMode ? "true" : "false"}"`; }
+  function makeDelBtn(onClick) {
+    const b = document.createElement("button");
+    b.className = "del-btn";
+    b.innerHTML = "×";
+    b.title = "Delete";
+    b.addEventListener("click", (e) => { e.stopPropagation(); if (confirm("Delete this item?")) onClick(); });
+    return b;
+  }
+  function bindEditable(el, setter) {
+    el.addEventListener("blur", () => { setter(el.textContent.trim()); saveData(); });
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey && el.tagName !== "P" && !el.classList.contains("copy") && !el.classList.contains("desc")) {
+        e.preventDefault(); el.blur();
+      }
+    });
+  }
+
+  // ========== HERO (data-edit bindings) ==========
+  function renderHero() {
+    document.querySelectorAll("[data-edit]").forEach(el => {
+      const path = el.dataset.edit.split(".");
+      // data.hero[path[1]]
+      if (path[0] === "hero") {
+        el.textContent = data.hero[path[1]] || "";
+        el.setAttribute("contenteditable", editMode ? "true" : "false");
+        el.onblur = () => { data.hero[path[1]] = el.textContent.trim(); saveData(); };
+      }
+    });
+  }
+
+  // ========== OVERVIEW: PHASES, PILLARS, METRICS ==========
+  function renderPhases() {
+    const c = document.getElementById("phase-cards");
+    c.innerHTML = "";
+    data.phases.forEach((p, idx) => {
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `
+        <div class="muted" ${ce()}>${esc(p.label)}</div>
+        <div class="stat" ${ce()}>${esc(p.stat)}</div>
+        <div class="muted" style="margin-top:6px;" ${ce()}>${esc(p.note)}</div>
+      `;
+      const [lbl, stat, note] = el.querySelectorAll("[contenteditable]");
+      bindEditable(lbl, v => p.label = v);
+      bindEditable(stat, v => p.stat = v);
+      bindEditable(note, v => p.note = v);
+      el.style.position = "relative";
+      el.appendChild(makeDelBtn(() => { data.phases.splice(idx,1); saveData(); renderPhases(); }));
+      c.appendChild(el);
+    });
+  }
+  function renderPillars() {
+    const c = document.getElementById("pillars");
+    c.innerHTML = "";
+    data.pillars.forEach((p, idx) => {
+      const el = document.createElement("div");
+      el.className = "pillar";
+      el.innerHTML = `
+        <span class="badge" ${ce()}>${esc(p.badge)}</span>
+        <h4 ${ce()}>${esc(p.title)}</h4>
+        <p ${ce()}>${esc(p.desc)}</p>
+      `;
+      const [b, t, d] = el.querySelectorAll("[contenteditable]");
+      bindEditable(b, v => p.badge = v);
+      bindEditable(t, v => p.title = v);
+      bindEditable(d, v => p.desc = v);
+      el.appendChild(makeDelBtn(() => { data.pillars.splice(idx,1); saveData(); renderPillars(); }));
+      c.appendChild(el);
+    });
+  }
+  function renderMetrics() {
+    const c = document.getElementById("metrics");
+    c.innerHTML = "";
+    data.metrics.forEach((m, idx) => {
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `<div class="muted" ${ce()}>${esc(m.label)}</div><div class="stat" ${ce()}>${esc(m.stat)}</div>`;
+      const [lbl, st] = el.querySelectorAll("[contenteditable]");
+      bindEditable(lbl, v => m.label = v);
+      bindEditable(st, v => m.stat = v);
+      el.style.position = "relative";
+      el.appendChild(makeDelBtn(() => { data.metrics.splice(idx,1); saveData(); renderMetrics(); }));
+      c.appendChild(el);
+    });
+  }
+
+  // ========== TIMELINE ==========
+  function renderTimeline() {
+    const c = document.getElementById("timeline-list");
+    c.innerHTML = "";
+    data.timeline.forEach((it, idx) => {
+      const el = document.createElement("div");
+      el.className = "t-item" + (it.launch ? " launch" : "");
+      el.innerHTML = `
+        <div class="when" ${ce()}>${esc(it.when)}</div>
+        <h4 ${ce()}>${esc(it.title)}</h4>
+        <p ${ce()}>${esc(it.desc)}</p>
+      `;
+      const [w, t, d] = el.querySelectorAll("[contenteditable]");
+      bindEditable(w, v => it.when = v);
+      bindEditable(t, v => it.title = v);
+      bindEditable(d, v => it.desc = v);
+      el.appendChild(makeDelBtn(() => { data.timeline.splice(idx,1); saveData(); renderTimeline(); }));
+      c.appendChild(el);
+    });
+  }
+
+  // ========== CONTENT CALENDAR ==========
+  function getFilters() {
+    return {
+      phase: document.querySelector(".chip.on[data-filter='phase']")?.dataset.value || "all",
+      platform: document.querySelector(".chip.on[data-filter='platform']")?.dataset.value || "all"
+    };
+  }
+  function renderPosts() {
+    const { phase, platform } = getFilters();
+    const list = document.getElementById("post-list");
+    list.innerHTML = "";
+    const filtered = data.posts
+      .map((p, idx) => ({ p, idx }))
+      .filter(({p}) => (phase === "all" || p.phase === phase) && (platform === "all" || p.platforms.includes(platform)));
+    if (filtered.length === 0) {
+      list.innerHTML = `<div class="card" style="text-align:center;color:var(--muted);">No posts match that filter combination.</div>`;
+      return;
+    }
+    filtered.forEach(({p, idx}) => {
+      const el = document.createElement("div");
+      el.className = "post";
+      const igOn = p.platforms.includes("ig");
+      const ttOn = p.platforms.includes("tt");
+      el.innerHTML = `
+        <div>
+          <div class="date" ${ce()}>${esc(p.date)}</div>
+          <div class="day" ${ce()}>${esc(p.day)}</div>
+          <div class="platforms">
+            <span class="pbadge ig ${igOn ? '' : 'off'}" data-platform="ig">Instagram</span>
+            <span class="pbadge tt ${ttOn ? '' : 'off'}" data-platform="tt">TikTok</span>
+          </div>
+        </div>
+        <div>
+          <h4 ${ce()}>${esc(p.title)}</h4>
+          <div class="copy" ${ce()}>${esc(p.copy)}</div>
+          <div class="meta">
+            ${p.tags.map((t,ti) => `<span class="meta-tag"><span class="tag-text" ${ce()}>${esc(t)}</span><span class="x" data-ti="${ti}">×</span></span>`).join("")}
+            <button class="add-tag-btn">+ tag</button>
+          </div>
+        </div>
+        <div class="type" ${ce()}>${esc(p.type)}</div>
+      `;
+      const [dateEl, dayEl, titleEl, copyEl, typeEl] = el.querySelectorAll("[contenteditable]:not(.tag-text)");
+      bindEditable(dateEl, v => p.date = v);
+      bindEditable(dayEl, v => p.day = v);
+      bindEditable(titleEl, v => p.title = v);
+      bindEditable(copyEl, v => p.copy = v);
+      bindEditable(typeEl, v => p.type = v);
+      // Tag text editing
+      el.querySelectorAll(".tag-text").forEach((t, ti) => {
+        t.setAttribute("contenteditable", editMode ? "true" : "false");
+        t.addEventListener("blur", () => { p.tags[ti] = t.textContent.trim(); saveData(); });
+      });
+      // Tag delete
+      el.querySelectorAll(".meta-tag .x").forEach(x => {
+        x.addEventListener("click", (e) => {
+          const ti = parseInt(x.dataset.ti, 10);
+          p.tags.splice(ti, 1); saveData(); renderPosts();
+        });
+      });
+      // Add tag
+      el.querySelector(".add-tag-btn").addEventListener("click", () => {
+        const name = prompt("New tag:");
+        if (name) { p.tags.push(name.trim()); saveData(); renderPosts(); }
+      });
+      // Platform toggle
+      el.querySelectorAll(".pbadge").forEach(b => {
+        b.addEventListener("click", () => {
+          if (!editMode) return;
+          const plat = b.dataset.platform;
+          if (p.platforms.includes(plat)) {
+            p.platforms = p.platforms.filter(x => x !== plat);
+          } else {
+            p.platforms.push(plat);
+          }
+          saveData(); renderPosts();
+        });
+      });
+      // Delete post
+      el.appendChild(makeDelBtn(() => { data.posts.splice(idx,1); saveData(); renderPosts(); }));
+      list.appendChild(el);
+    });
+  }
+  document.querySelectorAll(".chip[data-filter]").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const group = chip.dataset.filter;
+      document.querySelectorAll(`.chip[data-filter='${group}']`).forEach(c => c.classList.remove("on"));
+      chip.classList.add("on");
+      renderPosts();
+    });
+  });
+
+  // ========== IDEAS ==========
+  function renderIdeas() {
+    const c = document.getElementById("idea-list");
+    c.innerHTML = "";
+    data.ideas.forEach((i, idx) => {
+      const el = document.createElement("div");
+      el.className = "idea";
+      el.innerHTML = `
+        <span class="cat" ${ce()}>${esc(i.cat)}</span>
+        <h4 ${ce()}>${esc(i.title)}</h4>
+        <p ${ce()}>${esc(i.desc)}</p>
+        <span class="audio" ${ce()}>${i.audio ? "♪ " + esc(i.audio) : ""}</span>
+      `;
+      const [cat, t, d, a] = el.querySelectorAll("[contenteditable]");
+      bindEditable(cat, v => i.cat = v);
+      bindEditable(t, v => i.title = v);
+      bindEditable(d, v => i.desc = v);
+      bindEditable(a, v => { i.audio = v.replace(/^♪\s*/, "").trim(); });
+      el.appendChild(makeDelBtn(() => { data.ideas.splice(idx,1); saveData(); renderIdeas(); }));
+      c.appendChild(el);
+    });
+  }
+
+  // ========== CHECKLIST ==========
+  function renderChecks() {
+    const c = document.getElementById("check-sections");
+    c.innerHTML = "";
+    let total = 0, done = 0;
+    data.checks.forEach((section, si) => {
+      const sec = document.createElement("div");
+      sec.className = "check-section";
+      sec.innerHTML = `
+        <h3 ${ce()}>${esc(section.heading)}</h3>
+        <div class="sub" ${ce()}>${esc(section.sub)}</div>
+      `;
+      const [hEl, subEl] = sec.querySelectorAll("[contenteditable]");
+      bindEditable(hEl, v => section.heading = v);
+      bindEditable(subEl, v => section.sub = v);
+
+      section.items.forEach((item, ii) => {
+        const key = `dt-check-${si}-${ii}`;
+        const isDone = localStorage.getItem(key) === "1";
+        total++; if (isDone) done++;
+        const row = document.createElement("div");
+        row.className = "check" + (isDone ? " done" : "");
+        row.innerHTML = `
+          <input type="checkbox" id="${key}" ${isDone ? "checked" : ""} />
+          <label for="${key}"><span class="ctitle" ${ce()}>${esc(item[0])}</span><span class="hint" ${ce()}>${esc(item[1])}</span></label>
+        `;
+        const titleEl = row.querySelector(".ctitle");
+        const hintEl = row.querySelector(".hint");
+        bindEditable(titleEl, v => item[0] = v);
+        bindEditable(hintEl, v => item[1] = v);
+        row.querySelector("input").addEventListener("change", e => {
+          localStorage.setItem(key, e.target.checked ? "1" : "0");
+          renderChecks();
+        });
+        row.appendChild(makeDelBtn(() => { section.items.splice(ii,1); saveData(); renderChecks(); }));
+        sec.appendChild(row);
+      });
+
+      // Add item button (inside section)
+      const addItemBtn = document.createElement("button");
+      addItemBtn.className = "add-btn";
+      addItemBtn.textContent = "+ Add item";
+      addItemBtn.style.marginTop = "12px";
+      addItemBtn.addEventListener("click", () => {
+        section.items.push(["New item", "Optional hint"]);
+        saveData(); renderChecks();
+      });
+      sec.appendChild(addItemBtn);
+
+      // Delete section
+      sec.appendChild(makeDelBtn(() => { data.checks.splice(si,1); saveData(); renderChecks(); }));
+      c.appendChild(sec);
+    });
+    const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+    document.getElementById("progress-bar").style.width = pct + "%";
+  }
+  document.getElementById("reset-checks").addEventListener("click", () => {
+    if (!confirm("Reset all checklist tick progress?")) return;
+    data.checks.forEach((section, si) => section.items.forEach((_, ii) => localStorage.removeItem(`dt-check-${si}-${ii}`)));
+    renderChecks();
+  });
+
+  // ========== TEAM BOARD ==========
+  function renderBoard() {
+    const c = document.getElementById("board");
+    c.innerHTML = "";
+    data.board.forEach((lane, li) => {
+      const col = document.createElement("div");
+      col.className = "col";
+      col.innerHTML = `
+        <h3 ${ce()}>${esc(lane.title)}</h3>
+        <div class="sub" ${ce()}>${esc(lane.sub)}</div>
+        <div class="lane-tasks"></div>
+        <button class="add-btn add-task-btn">+ Add task</button>
+      `;
+      const [tt, sub] = col.querySelectorAll("[contenteditable]");
+      bindEditable(tt, v => lane.title = v);
+      bindEditable(sub, v => lane.sub = v);
+      const tasksEl = col.querySelector(".lane-tasks");
+      lane.tasks.forEach((task, ti) => {
+        const el = document.createElement("div");
+        el.className = "task";
+        el.innerHTML = `<strong ${ce()}>${esc(task.t)}</strong><span class="desc" ${ce()}>${esc(task.d)}</span><span class="when" ${ce()}>${esc(task.w)}</span>`;
+        const [tn, td, tw] = el.querySelectorAll("[contenteditable]");
+        bindEditable(tn, v => task.t = v);
+        bindEditable(td, v => task.d = v);
+        bindEditable(tw, v => task.w = v);
+        el.appendChild(makeDelBtn(() => { lane.tasks.splice(ti,1); saveData(); renderBoard(); }));
+        tasksEl.appendChild(el);
+      });
+      col.querySelector(".add-task-btn").addEventListener("click", () => {
+        lane.tasks.push({ t: "New task", w: "When", d: "What this task involves." });
+        saveData(); renderBoard();
+      });
+      col.appendChild(makeDelBtn(() => { data.board.splice(li,1); saveData(); renderBoard(); }));
+      c.appendChild(col);
+    });
+  }
+
+  // ========== ADD BUTTONS (top-level lists) ==========
+  document.querySelectorAll(".add-btn[data-add]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const what = btn.dataset.add;
+      if (what === "pillar") { data.pillars.push({ badge: "New", title: "New pillar", desc: "Describe this pillar." }); renderPillars(); }
+      else if (what === "metric") { data.metrics.push({ label: "New metric", stat: "0" }); renderMetrics(); }
+      else if (what === "timeline") { data.timeline.push({ when: "Date", title: "New milestone", desc: "What happens.", launch: false }); renderTimeline(); }
+      else if (what === "post") { data.posts.push({ date: "Date", day: "Day", phase: "week1", platforms: ["ig"], type: "Post type", title: "New post title", copy: "Post copy / direction.", tags: ["New"] }); renderPosts(); }
+      else if (what === "idea") { data.ideas.push({ cat: "Category", title: "New idea", desc: "Describe the idea.", audio: "" }); renderIdeas(); }
+      else if (what === "check-section") { data.checks.push({ heading: "New section", sub: "Section description.", items: [["New item", "Hint"]] }); renderChecks(); }
+      saveData();
+    });
+  });
+
+  // ========== EDIT MODE TOGGLE ==========
+  function setEditMode(on) {
+    editMode = on;
+    document.body.classList.toggle("edit", on);
+    document.getElementById("edit-toggle").innerHTML = on ? "👁️ View" : "✏️ Edit";
+    document.getElementById("save-status").textContent = on ? "Edit mode" : "View mode";
+    renderAll();
+  }
+  document.getElementById("edit-toggle").addEventListener("click", () => setEditMode(!editMode));
+
+  // ========== EXPORT / IMPORT / RESET ==========
+  document.getElementById("export-btn").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "dt-launch-plan.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+  document.getElementById("import-btn").addEventListener("click", () => {
+    document.getElementById("import-input").click();
+  });
+  document.getElementById("import-input").addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(reader.result);
+        if (!confirm("Replace current plan with imported file?")) return;
+        data = Object.assign(JSON.parse(JSON.stringify(DEFAULTS)), parsed);
+        saveData(); renderAll();
+      } catch (err) { alert("Invalid file: " + err.message); }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  });
+  document.getElementById("reset-all-btn").addEventListener("click", () => {
+    if (!confirm("Reset the entire plan back to the original defaults? This will erase all your edits.")) return;
+    localStorage.removeItem(STORE_KEY);
+    data = JSON.parse(JSON.stringify(DEFAULTS));
+    renderAll();
+  });
+
+  // ========== RENDER ALL ==========
+  function renderAll() {
+    renderHero();
+    renderPhases();
+    renderPillars();
+    renderMetrics();
+    renderTimeline();
+    renderPosts();
+    renderIdeas();
+    renderChecks();
+    renderBoard();
+  }
+  renderAll();
+</script>
+</body>
+</html>
